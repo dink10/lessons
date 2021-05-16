@@ -1,0 +1,24 @@
+{
+  "debug": true,
+  "applications": [
+    {
+      "name": "Consumer",
+      "workers": 3,
+      "rules": [
+        {
+          "logEveryMessage": true
+        }
+      ]
+    },
+    {
+      "name": "Producer",
+      "workers": 10,
+      "dir": "./files",
+      "rules": [
+        {
+          "sleepBeforeSending": 180
+        }
+      ]
+    }
+  ]
+}

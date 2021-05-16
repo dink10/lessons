@@ -2,19 +2,18 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"os"
-
-	"github.com/davecgh/go-spew/spew"
+	//_ "github.com/davecgh/go-spew/spew"
 )
 
 type jsonExample struct {
-	LastVersion float64  `json:"version"`
-	IDs         []int    `json:"ids"`
-	Setting     settings `json:"setting"`
-	People      []people `json:"people"`
+	LastVersion json.Delim      `json:"version"`
+	Passwords   json.RawMessage `json:"passwords"`
+	IDs         []int           `json:"ids"`
+	Setting     settings        `json:"setting"`
+	People      []people        `json:"people"`
 }
 
 type settings struct {
@@ -31,7 +30,7 @@ type people struct {
 }
 
 func main() {
-	f, err := os.Open("./example.json")
+	f, err := os.Open("example.json")
 	logError(err)
 
 	data, err := io.ReadAll(f)
@@ -40,14 +39,12 @@ func main() {
 	je := jsonExample{}
 	logError(json.Unmarshal(data, &je))
 
-	fmt.Println(je)
-
 	var names []string
 	for i := range je.People {
 		names = append(names, je.People[i].Name)
 	}
 
-	spew.Dump(names)
+	//spew.Dump(names)
 }
 
 func logError(err error) {

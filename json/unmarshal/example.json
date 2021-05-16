@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "passwords": [
+    "qwerty",
+    "12345",
+    "qwer123",
+    1111
+  ],
+  "ids": [
+    110,
+    130,
+    1034
+  ],
+  "settings": {
+    "auto": true
+  },
+  "people": [
+    {
+      "name": "John",
+      "surname": "Shark",
+      "birthday": "20.01.2000",
+      "followers": 100,
+      "rating": 4.5,
+      "active": true
+    },
+    {
+      "name": "Rick",
+      "surname": "Kuk",
+      "birthday": "01.01.1980",
+      "followers": 50,
+      "rating": 5,
+      "active": false
+    }
+  ]
+}
