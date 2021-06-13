@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carstore xmlns:real="http://testproject.developersgroup1.companyname/department2/namespaces/real"
+          xmlns:toy="http://testproject.developersgroup1.companyname/department2/namespaces/toy">
+    <real:car category="truck">
+        <model lang="en">Scania R 770</model>
+        <year>2005</year>
+        <price currency="US dollar">200000.00</price>
+    </real:car>
+    <toy:car category="sedan">
+        <title lang="en">Ford Focus</title>
+        <year>2012</year>
+        <price currency="US dollar">100.00</price>
+    </toy:car>
+</carstore>
