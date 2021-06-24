@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "github.com/dink10/lessons/grpc_users_service/api";
+
+package user;
+
+import "google/protobuf/empty.proto";
+
+message User {
+  int64  id    = 1;
+  string name  = 2;
+  int64  age   = 3;
+  string email = 4;
+}
+
+message Users {
+  repeated User users = 1;
+}
+
+message Identifier {
+  int64 id = 1;
+}
+
+service UserService {
+  rpc CreateUser(User) returns (User) {}
+  rpc UpdateUser(User) returns (User) {}
+  rpc GetUsers(google.protobuf.Empty) returns (Users) {}
+  rpc DeleteUser(Identifier) returns (google.protobuf.Empty) {}
+}

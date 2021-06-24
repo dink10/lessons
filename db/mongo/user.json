@@ -1,0 +1,9 @@
+{
+  "name": "Anton",
+  "age": 30,
+  "email": "anton@gmail.com",
+  "params": {
+    "height": 180,
+    "weight": 70
+  }
+}

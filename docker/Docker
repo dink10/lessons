@@ -1,0 +1,12 @@
+Docker Image
+
+- ubuntu
+- php
+- golang
+
+hub.docker.com
+
+docker run <image> <опциональная команды, которая выполнится внутри контейнера>
+
+
+Docker Volumes

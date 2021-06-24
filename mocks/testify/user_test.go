@@ -15,5 +15,7 @@ func TestUserTestify(t *testing.T) {
 
 	mockDoer.On("Do", 1, "work1").Return("done").Once()
 
-	assert.Equal(t, "done", testUser.Use())
+	res := testUser.Use()
+
+	assert.Equal(t, "done", res)
 }
